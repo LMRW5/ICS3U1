@@ -9,10 +9,12 @@ public class PowerRule {
         String[] coeffienctsArray = input.nextLine().split(" ");
         String[] degreesArray = input.nextLine().split(" ");
         input.close();
-        String output = "";
+        String function = "";
         for (int i = 0; i < degreesArray.length; i++) {
-            output += coeffienctsArray[i] + "x^
+            function += coeffienctsArray[i] + "x^" + degreesArray[i];
         }
+        System.out.println(function);
+
 
     }
 }
