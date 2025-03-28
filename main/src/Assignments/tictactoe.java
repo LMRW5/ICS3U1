@@ -3,7 +3,7 @@ package Assignments;
 import java.util.*;
 
 public class tictactoe {
-    static Boolean terminal(String[][] grid) {
+    static boolean terminal(String[][] grid) {
         // checks if game has ended
         if (winner(grid) != null) {
             return true;
