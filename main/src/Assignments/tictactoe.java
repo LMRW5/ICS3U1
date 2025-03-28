@@ -72,10 +72,10 @@ public class tictactoe {
 
             playermove: while (true) {
                 try {
-                    System.out.println("What is your move, enter row then column with a space in between");
+                    System.out.println("What is your move, enter row then column with a space in between (zeroindexed)");
                     String[] move = input.nextLine().split(" ");
                     if (move.length != 2) {
-                        throw new Exception("Please make sure that you follow the format of row then column");
+                        throw new Exception("Please make sure that you follow the format of row then column (zeroindexed)");
                     }
                     int row = Integer.parseInt(move[0]);
                     int column = Integer.parseInt(move[1]);
