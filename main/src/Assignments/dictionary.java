@@ -10,7 +10,7 @@ public class dictionary {
         String line = null;
         HashSet<String> words = new HashSet<String>();
         try {
-            inputStream = new BufferedReader(new FileReader("dictionary.txt"));
+            inputStream = new BufferedReader(new FileReader("C:\\Users\\342861630\\Desktop\\Main\\main\\src\\dictionary.txt"));
             while ((line = inputStream.readLine()) != null) {
                 words.add(line);
             }
