@@ -187,7 +187,6 @@ public class tictactoe {
         Scanner input = new Scanner(System.in);
         boolean ai_turn;
         System.out.println();
-        gameloop:
         while (true){
             while (true) {
                 System.out.println("Would you like to play X or O");
@@ -215,7 +214,6 @@ public class tictactoe {
                 }
                 if (terminal(board)) {
                     System.out.println("Winner is: " + winner(board));
-                    input.close();
                     break;
                 }
 
@@ -256,7 +254,7 @@ public class tictactoe {
                 }
                 else if (x == 'n' || x == 'N'){
                     input.close();
-                    break gameloop;
+                    return;
                 }
                 else{
                     System.out.println("please enter y or n");
