@@ -45,9 +45,7 @@ public class tictactoe {
             if (grid[i][0].equals(grid[i][1]) & grid[i][1].equals(grid[i][2]) & !grid[i][0].equals("E")) {
                 return grid[i][0];
             }
-        }
-        // vertical
-        for (int i = 0; i < 3; i++) {
+            // vertical
             if (grid[0][i].equals(grid[1][i]) & grid[1][i].equals(grid[2][i]) & !grid[0][i].equals("E")) {
                 return grid[0][i];
             }
@@ -187,7 +185,7 @@ public class tictactoe {
         Scanner input = new Scanner(System.in);
         boolean ai_turn;
         System.out.println();
-        while (true){
+        while (true) {
             while (true) {
                 System.out.println("Would you like to play X or O");
                 char player = input.nextLine().charAt(0);
@@ -219,10 +217,12 @@ public class tictactoe {
 
                 playermove: while (true) {
                     try {
-                        System.out.println("What is your move, enter row then column with a space in between. (zero indexed)");
+                        System.out.println(
+                                "What is your move, enter row then column with a space in between. (zero indexed)");
                         String[] move = input.nextLine().split(" ");
                         if (move.length != 2) {
-                            throw new Exception("Please make sure that you follow the format of row then column (zero indexed)");
+                            throw new Exception(
+                                    "Please make sure that you follow the format of row then column (zero indexed)");
                         }
                         int row = Integer.parseInt(move[0]);
                         int column = Integer.parseInt(move[1]);
@@ -246,17 +246,15 @@ public class tictactoe {
 
             }
             System.out.println("would you like to play again (y/n)");
-            while (true){
+            while (true) {
                 char x = input.nextLine().charAt(0);
-                if (x == 'y' || x == 'Y'){
+                if (x == 'y' || x == 'Y') {
                     board = init();
                     break;
-                }
-                else if (x == 'n' || x == 'N'){
+                } else if (x == 'n' || x == 'N') {
                     input.close();
                     return;
-                }
-                else{
+                } else {
                     System.out.println("please enter y or n");
                 }
 

@@ -26,12 +26,11 @@ public class tictactoe {
             if (grid[i][0].equals(grid[i][1]) & grid[i][1].equals(grid[i][2]) & !grid[i][0].equals("E")) {
                 return grid[i][0];
             }
-        }
-        // vertical
-        for (int i = 0; i < 3; i++) {
+            // vertical
             if (grid[0][i].equals(grid[1][i]) & grid[1][i].equals(grid[2][i]) & !grid[0][i].equals("E")) {
                 return grid[0][i];
             }
+
         }
         // diagnoals
         if (grid[0][0].equals(grid[1][1]) & grid[1][1].equals(grid[2][2]) & !(grid[0][0].equals("E"))) {
