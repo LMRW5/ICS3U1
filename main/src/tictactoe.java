@@ -22,7 +22,7 @@ public class tictactoe {
         }
     }
 
-    static boolean terminal(String[][] grid) {
+    public static boolean terminal(String[][] grid) {
         // checks if game has ended
         if (winner(grid) != null) {
             return true;
@@ -37,7 +37,7 @@ public class tictactoe {
         return true;
     }
 
-    static String winner(String[][] grid) {
+    public static String winner(String[][] grid) {
         // returns winner
 
         // horizontal
@@ -63,7 +63,7 @@ public class tictactoe {
 
     }
 
-    static int utility(String[][] grid) {
+    public static int utility(String[][] grid) {
         // returns status of board
         String val = winner(grid);
         if (val == null) {
@@ -78,7 +78,7 @@ public class tictactoe {
         }
     }
 
-    static List<int[]> actions(String[][] grid) {
+    public static List<int[]> actions(String[][] grid) {
         List<int[]> rval = new ArrayList<>();
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
@@ -91,7 +91,7 @@ public class tictactoe {
 
     }
 
-    static String[][] result(String[][] board, int[] action) {
+    public static String[][] result(String[][] board, int[] action) {
         // returns output state
         int i = action[0];
         int j = action[1];
@@ -103,7 +103,7 @@ public class tictactoe {
         return newboard;
     }
 
-    static int[] minimax(String[][] grid) {
+    public static int[] minimax(String[][] grid) {
         // returns best move for the grid
         String turn = turn(grid);
         if (terminal(grid)) {
