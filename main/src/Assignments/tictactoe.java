@@ -69,12 +69,14 @@ public class tictactoe {
         printBoard(board);
         while (true) {
 
-            playermove: while (true) {
+            while (true) {
                 try {
-                    System.out.println("What is your move, enter row then column with a space in between (zeroindexed)");
+                    System.out
+                            .println("What is your move, enter row then column with a space in between (zeroindexed)");
                     String[] move = input.nextLine().split(" ");
                     if (move.length != 2) {
-                        throw new Exception("Please make sure that you follow the format of row then column (zeroindexed)");
+                        throw new Exception(
+                                "Please make sure that you follow the format of row then column (zeroindexed)");
                     }
                     int row = Integer.parseInt(move[0]);
                     int column = Integer.parseInt(move[1]);
@@ -88,7 +90,7 @@ public class tictactoe {
                     turn = !turn;
                     System.out.println("Player " + (turn ? "X" : "O") + " turn:");
                     printBoard(board);
-                    break playermove;
+                    break;
                 } catch (NumberFormatException err) {
                     System.out.println("Please enter NUMBERS");
                 } catch (Exception err) {
