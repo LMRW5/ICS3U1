@@ -111,7 +111,7 @@ public class tictactoe {
         }
         if (turn.equals("X")) {
             // MAX player
-            double best = -999999999;
+            double best = Double.NEGATIVE_INFINITY;
             int[] bestAction = new int[2];
             for (int[] action : actions(grid)) {
                 double value = minval(result(grid, action));
@@ -121,9 +121,10 @@ public class tictactoe {
                 }
             }
             return bestAction;
+            
         } else {
             // MIN player
-            double best = 999999999;
+            double best = Double.POSITIVE_INFINITY;
             int[] bestAction = new int[2];
             for (int[] action : actions(grid)) {
                 double value = maxval(result(grid, action));
