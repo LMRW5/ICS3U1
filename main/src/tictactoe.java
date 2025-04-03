@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class tictactoe {
+
     public static String turn(String[][] grid) {
         // finds whos player turn
         int xctr = 0;
@@ -15,11 +16,7 @@ public class tictactoe {
                 }
             }
         }
-        if (xctr > octr) {
-            return "O";
-        } else {
-            return "X";
-        }
+        return xctr > octr ? "O" : "X";
     }
 
     public static boolean terminal(String[][] grid) {
@@ -121,7 +118,6 @@ public class tictactoe {
                 }
             }
             return bestAction;
-            
         } else {
             // MIN player
             double best = Double.POSITIVE_INFINITY;
@@ -143,7 +139,7 @@ public class tictactoe {
         if (terminal(state)) {
             return utility(state);
         }
-        double value = -999999999;
+        double value = Double.NEGATIVE_INFINITY;
         for (int[] action : actions(state)) {
             value = Math.max(value, minval(result(state, action)));
 
@@ -155,7 +151,7 @@ public class tictactoe {
         if (terminal(state)) {
             return utility(state);
         }
-        double value = 999999999;
+        double value = Double.POSITIVE_INFINITY;
         for (int[] action : actions(state)) {
             value = Math.min(value, maxval(result(state, action)));
         }
@@ -236,8 +232,10 @@ public class tictactoe {
                         System.out.println("Player: ");
                         printBoard(board);
                         break playermove;
+                    } catch (NumberFormatException err) {
+                        System.out.println("Please enter NUMBERS");
                     } catch (Exception err) {
-                        System.out.println(err);
+                        System.err.println(err);
                     }
                 }
                 if (terminal(board)) {

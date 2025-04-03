@@ -3,7 +3,7 @@ package Assignments;
 import java.util.*;
 import java.io.*;
 
-public class dictionary {
+public class Dictionary {
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
         BufferedReader inputStream = null;
@@ -19,7 +19,7 @@ public class dictionary {
         } finally {
             inputStream.close();
         }
-        System.out.println("What is your sentence");
+        System.out.println("\nWhat is your sentence");
         String sentence = input.nextLine();
         input.close();
         StringTokenizer tokens = new StringTokenizer(sentence, " ");
