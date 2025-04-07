@@ -25,7 +25,7 @@ public class Dictionary {
         StringTokenizer tokens = new StringTokenizer(sentence, " ");
         int ctr = 1;
         while (tokens.hasMoreTokens()) {
-            String token = tokens.nextToken();
+            String token = tokens.nextToken().toLowerCase();
             System.out.printf("%d. %s %s\n", ctr, token, (words.contains(token) ? " <valid>" : " <invalid>"));
             ctr++;
         }
