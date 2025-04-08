@@ -23,6 +23,31 @@ public class Point {
         return Math.sqrt(Math.pow(this.x - point.getX(),2) + Math.pow(this.y - point.getY(),2));
     }
     public Point difference(Point point){
-        
+        double newx = this.x - point.getX();
+        double newy = this.y - point.getY();
+        return new Point(newx,newy);
     }
+    public double slope(Point point){
+        return (point.getY() - this.y)/(point.getX() - this.x);
+    }
+    public double yIntercept(Point point){
+        double m = slope(point);
+        return this.y - m*this.x;
+    }
+    public void linearEquation(Point point){
+        double m = slope(point);
+        double b = yIntercept(point);
+        System.out.printf("y = %dx + %d", m, b);
+    }
+    public Point midpoint(Point point){
+        double x = (this.x + point.getX())/2;
+        double y = (this.y - point.getY())/2;
+        return new Point(x,y);
+    }
+    public Point sum(Point point){
+        double x = this.x + point.getX();
+        double y = this.y + point.getY();
+        return new Point(x,y);
+    }
+
 }

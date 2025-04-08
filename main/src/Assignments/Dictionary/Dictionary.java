@@ -1,11 +1,11 @@
-package Assignments;
+package Assignments.Dictionary;
 
 import java.util.*;
 import java.io.*;
 
 public class Dictionary {
     public static void main(String[] args) throws IOException {
-        final String dictionary = "C:\\Users\\342861630\\Desktop\\Main\\main\\src\\dictionary.txt";
+        final String dictionary = "main\\src\\Assignments\\Dictionary\\dictionary.txt";
         Scanner input = new Scanner(System.in);
         BufferedReader inputStream = null;
         String line = null;
