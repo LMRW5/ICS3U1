@@ -5,12 +5,14 @@ import java.io.*;
 
 public class Dictionary {
     public static void main(String[] args) throws IOException {
+        final String dictionary = "C:\\Users\\342861630\\Desktop\\Main\\main\\src\\dictionary.txt";
         Scanner input = new Scanner(System.in);
         BufferedReader inputStream = null;
         String line = null;
         HashSet<String> words = new HashSet<String>();
         try {
-            inputStream = new BufferedReader(new FileReader("C:\\Users\\342861630\\Desktop\\Main\\main\\src\\dictionary.txt"));
+            inputStream = new BufferedReader(
+                    new FileReader(dictionary));
             while ((line = inputStream.readLine()) != null) {
                 words.add(line);
             }
