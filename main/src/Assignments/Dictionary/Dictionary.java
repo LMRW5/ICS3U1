@@ -10,9 +10,9 @@ public class Dictionary {
         BufferedReader inputStream = null;
         String line = null;
         HashSet<String> words = new HashSet<String>();
+
         try {
-            inputStream = new BufferedReader(
-                    new FileReader(dictionary));
+            inputStream = new BufferedReader(new FileReader(dictionary));
             while ((line = inputStream.readLine()) != null) {
                 words.add(line);
             }
@@ -21,15 +21,14 @@ public class Dictionary {
         } finally {
             inputStream.close();
         }
+
         System.out.println("\nWhat is your sentence");
-        String sentence = input.nextLine();
+        StringTokenizer tokens = new StringTokenizer(input.nextLine(), " ");
         input.close();
-        StringTokenizer tokens = new StringTokenizer(sentence, " ");
-        int ctr = 1;
-        while (tokens.hasMoreTokens()) {
+        
+        for (int i = 0; tokens.hasMoreTokens(); i++) {
             String token = tokens.nextToken().toLowerCase();
-            System.out.printf("%d. %s %s\n", ctr, token, (words.contains(token) ? " <valid>" : " <invalid>"));
-            ctr++;
+            System.out.printf("%d. %s %s\n", i + 1, token, (words.contains(token) ? " <valid>" : " <invalid>"));
         }
 
     }
