@@ -1,9 +1,9 @@
-package Assignments.line;
+package Assignments.point;
 
 public class Point {
 
-    private double x;
-    private double y;
+    private final double x;
+    private final double y;
 
     public Point(double x, double y) {
         this.x = x;
@@ -27,13 +27,15 @@ public class Point {
     }
 
     public double distance(Point point) {
-        return Math.sqrt(Math.pow(this.x - point.getX(), 2) + Math.pow(this.y - point.getY(), 2));
+        double xDiff = this.x - point.getX();
+        double yDiff = this.y - point.getY();
+        return Math.sqrt(Math.pow(xDiff, 2) + Math.pow(yDiff, 2));
     }
 
     public Point difference(Point point) {
-        double newx = this.x - point.getX();
-        double newy = this.y - point.getY();
-        return new Point(newx, newy);
+        double newX = this.x - point.getX();
+        double newY = this.y - point.getY();
+        return new Point(newX, newY);
     }
 
     public double slope(Point point) {
@@ -56,15 +58,15 @@ public class Point {
     }
 
     public Point midpoint(Point point) {
-        double x = (this.x + point.getX()) / 2;
-        double y = (this.y - point.getY()) / 2;
-        return new Point(x, y);
+        double newX = (this.x + point.getX()) / 2;
+        double newY = (this.y + point.getY()) / 2;
+        return new Point(newX, newY);
     }
 
     public Point sum(Point point) {
-        double x = this.x + point.getX();
-        double y = this.y + point.getY();
-        return new Point(x, y);
+        double newX = this.x + point.getX();
+        double newY = this.y + point.getY();
+        return new Point(newX, newY);
     }
 
 }

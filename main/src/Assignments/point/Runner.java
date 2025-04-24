@@ -1,4 +1,4 @@
-package Assignments.line;
+package Assignments.point;
 
 public class Runner {
     public static void main(String[] args) {

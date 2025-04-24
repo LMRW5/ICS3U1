@@ -44,8 +44,8 @@ public enum CarDrivers {
 
     public void displayDriver() {
         System.out.printf(
-                "This driver has %d titles and scored them with %s\nHe has %d race wins and %d race starts\n",
-                this.titles, this.team, this.raceWins, this.raceStarts);
+                "%s has %d titles and scored them with %s\nHe has %d race wins and %d race starts\n",
+                this,this.titles, this.team, this.raceWins, this.raceStarts);
     }
 
     public void moreTitles(CarDrivers driver) {
@@ -54,17 +54,17 @@ public enum CarDrivers {
         } else if (driver.getTitles() < this.titles) {
             System.out.printf("%s has less titles\n", driver);
         } else {
-            System.out.println("They have the same amount of titles");
+            System.out.printf("%s and %s have the same amount of titles\n",this,driver);
         }
     }
 
     public void higherWinRate(CarDrivers driver) {
         if (driver.winrate() > this.winrate()) {
-            System.out.printf("%s has a higher win rate\n", driver);
+            System.out.printf("%s has a higher win rate than %s\n", driver, this);
         } else if (driver.winrate() > this.winrate()) {
-            System.out.printf("%s has a lower winrate\n", driver);
+            System.out.printf("%s has a higher winrate than %s\n", this, driver);
         } else {
-            System.out.println("They have the same winrate");
+            System.out.printf("%s and %s have the same winrate\n", this,driver);
         }
     }
 

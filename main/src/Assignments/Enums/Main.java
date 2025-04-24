@@ -6,7 +6,8 @@ public class Main {
         // Select two drivers for comparison
         CarDrivers driver1 = CarDrivers.SCHUMACHER;
         CarDrivers driver2 = CarDrivers.HAMILTON;
-
+        //spaces
+        System.out.println();
         // Display driver information
         System.out.println("=== Driver 1 Info ===");
         driver1.displayDriver();
