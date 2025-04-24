@@ -1,6 +1,6 @@
 package Assignments.Enums;
 
-public class Main {
+public class DriverTest {
     public static void main(String[] args) {
 
         // Select two drivers for comparison

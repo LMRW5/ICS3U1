@@ -33,7 +33,7 @@ public class Chips extends Snacks {
             return "they are equal in sugar content";
         }
         
-    }
+    } 
     public double litersOfWaterRecommended(){
         return this.sodium/2000;
     }

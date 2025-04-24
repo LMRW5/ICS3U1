@@ -46,11 +46,7 @@ public class Cookies extends Snacks {
         }
         
     }
-    public boolean diabetes(){
-        if(this.sugar*amount > 50){
-            return true;
-
-        }
-        else return false;
+    public boolean isOverRecommendedValue(){
+        return this.sugar*amount > 50;
     }
 }
