@@ -61,8 +61,8 @@ public enum CarDrivers {
     public void higherWinRate(CarDrivers driver) {
         if (driver.winrate() > this.winrate()) {
             System.out.printf("%s has a higher win rate than %s\n", driver, this);
-        } else if (driver.winrate() > this.winrate()) {
-            System.out.printf("%s has a higher winrate than %s\n", this, driver);
+        } else if (driver.winrate() < this.winrate()) {
+            System.out.printf("%s has a higher win rate than %s\n", this, driver);
         } else {
             System.out.printf("%s and %s have the same winrate\n", this, driver);
         }

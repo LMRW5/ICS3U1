@@ -21,6 +21,10 @@ public class DriverTest {
         System.out.println(driver1 + " team: " + driver1.getTeam());
         System.out.println(driver1 + " race starts: " + driver1.getRaceStarts());
         System.out.println(driver1 + " race wins: " + driver1.getRaceWins());
+        System.out.println(driver2 + " titles: " + driver2.getTitles());
+        System.out.println(driver2 + " team: " + driver2.getTeam());
+        System.out.println(driver2 + " race starts: " + driver2.getRaceStarts());
+        System.out.println(driver2 + " race wins: " + driver2.getRaceWins());
 
         // Compare titles
         System.out.println("\n=== Title Comparison ===");
@@ -31,6 +35,11 @@ public class DriverTest {
         System.out.println("\n=== Win Rate Comparison ===");
         driver1.higherWinRate(driver2);
         driver2.higherWinRate(driver1);
+
+        // Check if drivers are world champions
+        System.out.println("\n=== World Champion Check ===");
+        System.out.printf("%s is a world champion: %b\n", driver1, driver1.isWorldChampion());
+        System.out.printf("%s is a world champion: %b\n", driver2, driver2.isWorldChampion());
 
         // Print win rates and wins-to-titles ratios
         System.out.println("\n=== Win Rate and Wins-to-Titles Ratio ===");
