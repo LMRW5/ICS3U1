@@ -17,12 +17,25 @@ public class Snacks {
     public Snacks(){
         this(0.0,0.0,"unnamed");
     }
+    /**
+     * returns the amount of calories in the snack
+     * @return
+     */
     public double getCalories(){
         return this.calories;
     }
+    /**
+     * returns the amount of sugar in the snack
+     * @return
+     */
+
     public double getSugar(){
         return this.sugar;
     }
+    /**
+     * returns the name of the snack
+     * @return
+     */
     public String getName(){
         return this.name;
     }
