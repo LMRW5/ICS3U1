@@ -10,13 +10,14 @@ public class Chips extends Snacks {
     /**
      * returns amount of sodium in the chips
      * @return
+     * 
      */
     public double getSodium(){
         return this.sodium;
     }
     /**
      * takes a chip as a paramater, compares the calories of the two chips, returning the name of the chip with more calories
-     * @param chip
+     * @param chi
      * @return
      */
     public String moreCalories(Chips chip){

@@ -12,6 +12,14 @@ public class Snacks {
         this.name = name;
     }
     /**
+     * constructor that defaults name to "unnamed"
+     * @param calories
+     * @param sugar
+     */
+    public Snacks(double calories, double sugar){
+        this(calories, sugar, "unnamed");
+    }
+    /**
      * default constructor for the snacks class, sets all values to 0.0 and name to "unnamed"
      */
     public Snacks(){
