@@ -8,17 +8,16 @@ public class Chips extends Snacks {
         this.sodium = sodium;
     }
     /**
-     * returns amount of sodium in the chips
-     * @return
+     * @return amount of sodium in the chips
      * 
      */
     public double getSodium(){
         return this.sodium;
     }
     /**
-     * takes a chip as a paramater, compares the calories of the two chips, returning the name of the chip with more calories
-     * @param chi
-     * @return
+     * takes a chip as a paramater, compares the calories of the two chips
+     * @param chip
+     * @return the name of the chip with more calories
      */
     public String moreCalories(Chips chip){
         if (this.calories > chip.getCalories()){
@@ -33,9 +32,9 @@ public class Chips extends Snacks {
 
     }
     /**
-     * takes a chip as a paramater, compares the sodium of the two chips, returning the name of the chip with more sodium
+     * takes a chip as a paramater, compares the sodium of the two chips
      * @param chip
-     * @return
+     * @return the name of the chip with more sodium
      */
     public String moreSalt(Chips chip){
         if (this.sodium > chip.getSodium()){
@@ -49,10 +48,9 @@ public class Chips extends Snacks {
         }
         
     } 
-    /**
-     * returns amount of liters of water recommended to drink after eating the chips
+    /** 
      * 1 liter of water is recommended for every 2000mg of sodium consumed
-     * @return
+     * @return amount of liters of water recommended to drink after eating the chips
      */
     public double litersOfWaterRecommended(){
         return this.sodium/2000;

@@ -13,8 +13,8 @@ public class Cookies extends Snacks {
         this(148.0,9.9,"Chocolate Chip Cookie",1);
     }
     /**
-     * returns the amount of cookies
-     * @return
+     * 
+     * @return the amount of cookies
      */
     public int getAmount(){
         return this.amount;
@@ -26,23 +26,21 @@ public class Cookies extends Snacks {
         System.out.printf("You are eating %s %d times", this.name, this.amount);
     }
     /**
-     * returns the total amount of calories in the cookies eaten
-     * @return
+     * @return the total amount of calories in the cookies eaten
      */
     public double totalCalories(){
         return this.calories*amount;
     }
     /**
-     * returns the total amount of sugar in the cookies eaten
-     * @return
+     * @return the total amount of sugar in the cookies eaten
      */
     public double totalSugar(){
         return this.sugar*amount;
     }
     /**
-     * takes in another cookie and compares the calories of the two cookies, returning the name of the cookie with more calories
+     * takes in another cookie and compares the calories of the two cookies
      * @param cookie
-     * @return
+     * @return the name of the cookie with more calories
      */
     public String moreCalories(Cookies cookie){
         if (this.calories > cookie.getCalories()){
@@ -57,9 +55,8 @@ public class Cookies extends Snacks {
 
     }
     /**
-     * takes in another cookie and compares the sugar of the two cookies, returning the name of the cookie with more sugar
-     * @param cookie
-     * @return
+     * takes in another cookie and compares the sugar of the two cookies, 
+     * @return the name of the cookie with more sugar
      */
     public String moreSugar(Cookies cookie){
         if (this.sugar > cookie.getSugar()){
@@ -74,8 +71,7 @@ public class Cookies extends Snacks {
         
     }
     /**
-     * returns true if the cookies eaten are over the recommended amount of sugar (50 grams) 
-     * @return
+     * @return true if the cookies eaten are over the recommended amount of sugar (50 grams)
      */
     public boolean isOverRecommendedValue(){
         return this.sugar*amount > 50;
