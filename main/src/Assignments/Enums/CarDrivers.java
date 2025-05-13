@@ -79,5 +79,4 @@ public enum CarDrivers {
     public boolean isWorldChampion() {
         return this.titles >= 1;
     }
-
 }
