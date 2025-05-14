@@ -28,13 +28,11 @@ public class DriverTest {
 
         // Compare titles
         System.out.println("\n=== Title Comparison ===");
-        driver1.moreTitles(driver2);
         driver2.moreTitles(driver1);
 
         // Compare win rates
         System.out.println("\n=== Win Rate Comparison ===");
         driver1.higherWinRate(driver2);
-        driver2.higherWinRate(driver1);
 
         // Check if drivers are world champions
         System.out.println("\n=== World Champion Check ===");

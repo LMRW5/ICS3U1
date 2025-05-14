@@ -15,36 +15,36 @@ public class Point {
     }
 
     public double getX() {
-        return this.x;
+        return x;
     }
 
     public double getY() {
-        return this.y;
+        return y;
     }
 
     public void displayCoordinate() {
-        System.out.printf("X coord is %f \nYcoord is %f\n", this.x, this.y);
+        System.out.printf("X coord is %f \nYcoord is %f\n", x, y);
     }
 
     public double distance(Point point) {
-        double xDiff = this.x - point.getX();
-        double yDiff = this.y - point.getY();
+        double xDiff = x - point.getX();
+        double yDiff = y - point.getY();
         return Math.sqrt(Math.pow(xDiff, 2) + Math.pow(yDiff, 2));
     }
 
     public Point difference(Point point) {
-        double newX = this.x - point.getX();
-        double newY = this.y - point.getY();
+        double newX = x - point.getX();
+        double newY = y - point.getY();
         return new Point(newX, newY);
     }
 
     public double slope(Point point) {
-        return (point.getY() - this.y) / (point.getX() - this.x);
+        return (point.getY() - y) / (point.getX() - x);
     }
 
     public double yIntercept(Point point) {
         double m = slope(point);
-        return this.y - m * this.x;
+        return y - m * x;
     }
 
     public void linearEquation(Point point) {
@@ -58,14 +58,14 @@ public class Point {
     }
 
     public Point midpoint(Point point) {
-        double newX = (this.x + point.getX()) / 2;
-        double newY = (this.y + point.getY()) / 2;
+        double newX = (x + point.getX()) / 2;
+        double newY = (y + point.getY()) / 2;
         return new Point(newX, newY);
     }
 
     public Point sum(Point point) {
-        double newX = this.x + point.getX();
-        double newY = this.y + point.getY();
+        double newX = x + point.getX();
+        double newY = y + point.getY();
         return new Point(newX, newY);
     }
 
