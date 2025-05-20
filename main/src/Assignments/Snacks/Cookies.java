@@ -1,7 +1,20 @@
 package Assignments.Snacks;
-
+/**
+ * Cookies class that extends the Snacks class
+ * This class contains the basic information about a cookie, such as calories, sugar, name, and amount.
+ * @author Ryan
+ * @version 1.0
+ */
 public class Cookies extends Snacks {
     protected int amount;
+    /**
+     * constructor that takes in the calories, sugar, name, and amount of the cookies
+     * calls the super constructor to set the calories, sugar, and name
+     * @param calories 
+     * @param sugar
+     * @param name
+     * @param amount
+     */
     public Cookies(double calories, double sugar, String name, int amount){
         super(calories, sugar, name);
         this.amount = amount;

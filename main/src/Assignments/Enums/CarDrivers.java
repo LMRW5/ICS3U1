@@ -47,7 +47,11 @@ public enum CarDrivers {
                 "%s has %d titles and scored them with %s\nHe has %d race wins and %d race starts\n",
                 this, titles, team, raceWins, raceStarts);
     }
-
+    /**
+     * Compares the number of titles between two drivers
+     *
+     * @param driver the other driver to compare with
+     */
     public void moreTitles(CarDrivers driver) {
         if (driver.getTitles() > titles) {
             System.out.printf("%s has more titles\n", driver);

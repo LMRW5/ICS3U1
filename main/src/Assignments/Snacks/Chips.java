@@ -1,13 +1,26 @@
 package Assignments.Snacks;
-
+/**
+* Chips class that extends the Snacks class
+* This class contains the basic information about chips, such as calories, sugar, name, and sodium.
+ * @author Ryan
+ * @version 1.0
+ */
 public class Chips extends Snacks {
     protected double sodium;
-    
+    /**
+     * constructor that takes in the calories, sugar, name, and sodium of the chips
+     * calls the super constructor to set the calories, sugar, and name
+     * @param calories 
+     * @param sugar
+     * @param name
+     * @param sodium
+     */
     public Chips(double calories, double sugar, String name, int sodium){
         super(calories, sugar, name);
         this.sodium = sodium;
     }
     /**
+     * @param none
      * @return amount of sodium in the chips
      * 
      */

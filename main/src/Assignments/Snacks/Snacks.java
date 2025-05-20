@@ -1,11 +1,22 @@
 package Assignments.Snacks;
 
+/**
+ * Super Class for all snacks
+ * This class contains the basic information about a snack, such as calories, sugar, and name.
+ * @author Ryan
+ * @version 1.0
+ */
 public class Snacks {
 
     protected double calories;
     protected double sugar;
     protected String name;
-
+    /**
+     * constructor that takes in the calories, sugar, and name of the snack
+     * @param calories 
+     * @param sugar
+     * @param name
+     */
     public Snacks(double calories, double sugar, String name){
         this.calories = calories;
         this.sugar = sugar;
@@ -13,7 +24,7 @@ public class Snacks {
     }
     /**
      * constructor that defaults name to "unnamed"
-     * @param calories
+     * @param calories 
      * @param sugar
      */
     public Snacks(double calories, double sugar){
